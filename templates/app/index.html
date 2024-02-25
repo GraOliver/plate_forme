@@ -1,0 +1,40 @@
+{% load static %}
+{% load customtags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Religarer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "app/css/main.css"%}'>
+    <script src='main.js'></script>
+</head>
+<body>
+    {% include 'app/footer_header/header.html'%}
+    <div class="gauche">
+        <div class="communaute">        
+            <div class="image">{{icone_communauté}}</div>
+                <div>       
+                    <ul>
+                        {% for l in communaute %}
+                        <li>{{l.nom}}</li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="centre">
+        <div class="actuality">
+            <div class="legende"><span></span></div>
+            <div><img src={{img_actuality}} alt="" srcset=""></div>
+            <div class="commentaire"> <input type="text" name="comment" id=""></div>
+
+        </div>
+    </div>
+
+    <input type="submit" value="connextion">
+    {% include 'app/footer_header/footer.html' %}
+</body>
+</html>

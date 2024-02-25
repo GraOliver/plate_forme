@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href='{% static "app/css/menu_accueil.css" %}'>
+<header class="header">
+    <nav class="wrapper">
+        <ul>
+            <li><a href="{% url 'accounts:register'%}" class="a_crea">Création du compte</a></li>
+            <li> <a href="{% url 'accounts:login'%}">Se connecter</a></li>
+        </ul>
+    </nav>
+</header>

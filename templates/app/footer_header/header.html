@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href='{% static "app/css/menu.css" %}'>
+<header class="header">
+    <nav class="wrapper">
+        <ul>
+            {% if user.is_authenticated %}
+                    <p>{{user.username}}  | <a href="{% url 'accounts:logout' %}">Se deconnecter</a></p>
+                {% else %}
+                <a href="{% url 'accounts:login'%}">Se connecter</a></p>
+                <a href="{% url 'accounts:register'%}">Creation du compte</a></p>
+                {% endif%}
+        
+        </ul>
+    </nav>
+</header>

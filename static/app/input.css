@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer{
+    @apply bg-green-500 w-full flex
+}
+.body{
+    @apply flex 
+}
+header li .a_crea{
+    @apply transition
+}
+.gauche{
+    @apply bg-slate-500 flex h-full w-1/6  border block
+}
+.droite{
+    @apply  bg-green-300 shadow-lg w-1/2
+}
+input{
+    @apply border border-green-700 border-r-2
+}
